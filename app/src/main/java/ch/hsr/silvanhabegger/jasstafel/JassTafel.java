@@ -1,10 +1,12 @@
 package ch.hsr.silvanhabegger.jasstafel;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -16,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -154,6 +157,17 @@ public class JassTafel extends ActionBarActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        android.support.v7.app.ActionBar ab= getSupportActionBar();
+        if(ab!=null){
+            ab.setBackgroundDrawable(new ColorDrawable(R.color.indigo_500));
+        }else {
+            Log.e("MainActivity", "Actionbar not found");
+        }
+    }
+
+    @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
@@ -166,21 +180,30 @@ public class JassTafel extends ActionBarActivity {
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
+        Toast notImplementet= Toast.makeText(getApplicationContext(),"Not implementet yet",Toast.LENGTH_SHORT);
         switch (position) {
             case 0:
-               // fragment = new Schieber();
+                //fragment = new Klassisch();
                 break;
             case 1:
-                //fragment = new Coiffeur();
+                // fragment = new Schieber();
+                notImplementet.show();
                 break;
             case 2:
-                //fragment = new Differenzler();
+                //fragment = new Coiffeur();
+                notImplementet.show();
                 break;
             case 3:
-                //fragment = new Molotov();
+                //fragment = new Differenzler();
+                notImplementet.show();
                 break;
             case 4:
+                //fragment = new Molotov();
+                notImplementet.show();
+                break;
+            case 5:
                 //fragment = new Pandur();
+                notImplementet.show();
                 break;
             default:
                 break;

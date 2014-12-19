@@ -8,6 +8,7 @@
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
+        <item>Klassisch</item>
         <item>Schieber</item>
         <item>Coiffeur</item>
         <item>Differenzler</item>
@@ -18,6 +19,7 @@
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->
     <array name="nav_drawer_icons">
+        <item>@drawable/ic_menu_my_calendar</item>
         <item>@drawable/ic_menu_my_calendar</item>
         <item>@drawable/ic_menu_play_clip</item>
         <item>@drawable/ic_menu_myplaces</item>
