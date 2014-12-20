@@ -159,12 +159,6 @@ public class JassTafel extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        android.support.v7.app.ActionBar ab= getSupportActionBar();
-        if(ab!=null){
-            ab.setBackgroundDrawable(new ColorDrawable(R.color.indigo_500));
-        }else {
-            Log.e("MainActivity", "Actionbar not found");
-        }
     }
 
     @Override
@@ -180,30 +174,24 @@ public class JassTafel extends ActionBarActivity {
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
-        Toast notImplementet= Toast.makeText(getApplicationContext(),"Not implementet yet",Toast.LENGTH_SHORT);
         switch (position) {
             case 0:
-                //fragment = new Klassisch();
+                fragment = new Klassisch();
                 break;
             case 1:
-                // fragment = new Schieber();
-                notImplementet.show();
+                fragment = new Schieber();
                 break;
             case 2:
-                //fragment = new Coiffeur();
-                notImplementet.show();
+                fragment = new Coiffeur();
                 break;
             case 3:
-                //fragment = new Differenzler();
-                notImplementet.show();
+                fragment = new Differenzler();
                 break;
             case 4:
-                //fragment = new Molotov();
-                notImplementet.show();
+                fragment = new Molotov();
                 break;
             case 5:
-                //fragment = new Pandur();
-                notImplementet.show();
+                fragment = new Pandur();
                 break;
             default:
                 break;
